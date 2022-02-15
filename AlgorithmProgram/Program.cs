@@ -11,7 +11,8 @@ namespace AlgorithmProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Algorithm Programs!\n");
-            Console.WriteLine("Enter 1.to print insertion Sort\nEnter 2.to print Bubble Sort\nEnter 3.to pirnt Merge Sort\n");
+            Console.WriteLine("Enter 1.to print insertion Sort\nEnter 2.to print Bubble Sort\n" +
+                "Enter 3.to pirnt Merge Sort\nEnter 4.to print Anagram\n");
             bool flag = true;
             while (flag)
             {
@@ -36,6 +37,13 @@ namespace AlgorithmProgram
                         MergeSort.Sort(arr2, 0, arr2.Length - 1);
                         MergeSort.PrintArray(arr2);
                         break;
+
+                    case 4:
+                        Anagram anagram = new Anagram();
+                        anagram.FindAnagram();
+                        break;
+                  
+                    
                 }
             }
 
