@@ -11,7 +11,7 @@ namespace AlgorithmProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Algorithm Programs!\n");
-            Console.WriteLine("Enter 1.to print insertion Sort\nEnter 2.to print Bubble Sort\n");
+            Console.WriteLine("Enter 1.to print insertion Sort\nEnter 2.to print Bubble Sort\nEnter 3.to pirnt Merge Sort\n");
             bool flag = true;
             while (flag)
             {
@@ -19,16 +19,22 @@ namespace AlgorithmProgram
                 switch (check)
                 {
                     case 1:
-                        InsertionSort insertion= new InsertionSort();
+                        InsertionSort insertion = new InsertionSort();
                         int[] arr = { 20, 15, 4, 8, 12, 3 };
                         insertion.Sort(arr);
                         insertion.printArray(arr);
                         break;
 
-                        case 2:
+                    case 2:
                         int[] arr1 = { 10, 35, 32, 13, 26 };
                         BubbleSort.BubbleSortInArray(arr1);
                         BubbleSort.PrintArray(arr1);
+                        break;
+
+                    case 3:
+                        int[] arr2 = { 33, 12, 9, 85, 21, 4 };
+                        MergeSort.Sort(arr2, 0, arr2.Length - 1);
+                        MergeSort.PrintArray(arr2);
                         break;
                 }
             }
