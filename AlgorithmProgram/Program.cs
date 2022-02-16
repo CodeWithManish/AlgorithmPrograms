@@ -12,7 +12,7 @@ namespace AlgorithmProgram
         {
             Console.WriteLine("Welcome to Algorithm Programs!\n");
             Console.WriteLine("Enter 1.to print insertion Sort\nEnter 2.to print Bubble Sort\n" +
-                "Enter 3.to pirnt Merge Sort\nEnter 4.to print Anagram\nEnter 5.to print Range of Prime Number\n");
+                "Enter 3.to pirnt Merge Sort\nEnter 4.to print Anagram\nEnter 5.to print Range of Prime Number\nEnter 6.to print Binary Search\n");
             bool flag = true;
             while (flag)
             {
@@ -46,6 +46,14 @@ namespace AlgorithmProgram
                     case 5:
                         PrimeNumRange prime = new PrimeNumRange();
                         prime.FindPrime();
+                        break;
+
+                    case 6:
+                        BinarySearch binary = new BinarySearch();
+                        System.Console.WriteLine("Enter the string : ");
+                        string str = Console.ReadLine();
+                        System.Console.WriteLine("Input is :" + str);
+                        binary.BinarySearchIterative(str);
                         break;
 
                 }
